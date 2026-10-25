@@ -32,6 +32,10 @@ final class CardMatchingViewModel: GameViewModel {
     var cards: [CardMatchingEngine.Card] { engine.cards }
     var columns: Int { engine.columns }
 
+    func outcome(duration: Double, completed: Bool) -> SessionOutcome {
+        engine.outcome(duration: duration, completed: completed)
+    }
+
     func begin() { startedAt = clock.now }
 
     func tick() {

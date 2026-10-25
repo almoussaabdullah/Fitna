@@ -33,6 +33,10 @@ final class SortingViewModel: GameViewModel {
     var tapped: Set<Int> { Set(engine.tappedIDs) }
     var ruleChanges: Bool { engine.changesRuleEachRound }
 
+    func outcome(duration: Double, completed: Bool) -> SessionOutcome {
+        engine.outcome(duration: duration, completed: completed)
+    }
+
     func begin() { nextRound() }
 
     func tick() {

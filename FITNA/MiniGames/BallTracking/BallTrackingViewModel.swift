@@ -44,6 +44,10 @@ final class BallTrackingViewModel: GameViewModel {
     /// Keeps SpriteKit actions frozen while the game is paused.
     func syncPause() { scene.isPaused = clock.isPaused }
 
+    func outcome(duration: Double, completed: Bool) -> SessionOutcome {
+        engine.outcome(duration: duration, completed: completed)
+    }
+
     func begin() { nextRound() }
 
     func tick() {

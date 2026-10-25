@@ -31,6 +31,10 @@ final class ValueComparisonViewModel: GameViewModel {
     }
     var displayedPair: ValueComparisonEngine.Pair { reveal?.pair ?? engine.pair }
 
+    func outcome(duration: Double, completed: Bool) -> SessionOutcome {
+        engine.outcome(duration: duration, completed: completed)
+    }
+
     func begin() { shownAt = clock.now }
 
     func tick() {

@@ -169,7 +169,7 @@ struct AssessmentFlowView: View {
     }
 
     private func save() {
-        let perf = results.mapValues(\.score)
+        let perf = results.mapValues { $0.score }
         let overall = AssessmentPlanner.overall(perf)
         let a = BrainAssessment(date: Date(), overallScore: overall)
         modelContext.insert(a)

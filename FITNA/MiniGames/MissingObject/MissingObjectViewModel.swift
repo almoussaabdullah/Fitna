@@ -40,6 +40,10 @@ final class MissingObjectViewModel: GameViewModel {
         return max(0, (until - clock.now) / engine.memorizeDuration)
     }
 
+    func outcome(duration: Double, completed: Bool) -> SessionOutcome {
+        engine.outcome(duration: duration, completed: completed)
+    }
+
     func begin() { nextRound() }
 
     func tick() {

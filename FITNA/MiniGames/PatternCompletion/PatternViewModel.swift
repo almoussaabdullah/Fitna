@@ -26,6 +26,10 @@ final class PatternViewModel: GameViewModel {
     var hudTimeFraction: Double? { nil }
     var isRevealing: Bool { feedback != nil }
 
+    func outcome(duration: Double, completed: Bool) -> SessionOutcome {
+        engine.outcome(duration: duration, completed: completed)
+    }
+
     func begin() { next() }
 
     func tick() {

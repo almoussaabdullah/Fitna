@@ -32,6 +32,10 @@ final class OddOneOutViewModel: GameViewModel {
     /// The grid currently on screen (live round or the one being revealed).
     var displayed: OddOneOutEngine.Round? { revealed?.round ?? round }
 
+    func outcome(duration: Double, completed: Bool) -> SessionOutcome {
+        engine.outcome(duration: duration, completed: completed)
+    }
+
     func begin() { nextRound() }
 
     func tick() {

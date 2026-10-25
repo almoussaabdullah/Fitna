@@ -49,6 +49,10 @@ final class NumberMemoryViewModel: GameViewModel {
         return max(0, (until - clock.now) / engine.displayDuration)
     }
 
+    func outcome(duration: Double, completed: Bool) -> SessionOutcome {
+        engine.outcome(duration: duration, completed: completed)
+    }
+
     func begin() { nextTrial() }
 
     func tick() {

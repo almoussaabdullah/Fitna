@@ -33,6 +33,10 @@ final class StroopViewModel: GameViewModel {
         max(0, 1 - (clock.now - stimulusShownAt) / engine.stimulusTimeLimit)
     }
 
+    func outcome(duration: Double, completed: Bool) -> SessionOutcome {
+        engine.outcome(duration: duration, completed: completed)
+    }
+
     func begin() {
         startedAt = clock.now
         stimulusShownAt = clock.now

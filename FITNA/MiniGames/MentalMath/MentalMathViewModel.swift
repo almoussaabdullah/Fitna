@@ -34,6 +34,10 @@ final class MentalMathViewModel: GameViewModel {
 
     private var elapsed: Double { clock.now - startedAt + penalties }
 
+    func outcome(duration: Double, completed: Bool) -> SessionOutcome {
+        engine.outcome(duration: duration, completed: completed)
+    }
+
     func begin() {
         startedAt = clock.now
         questionShownAt = clock.now
