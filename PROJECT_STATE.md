@@ -11,7 +11,7 @@ _Last updated: 2026-10-25_
 | 3. Remaining nine games — all engines with validated generators + SwiftUI views (تتبّع الكرة uses SpriteKit) | Done |
 | 4. Brain test (radar chart, 0–100 overall, history), daily workout generator + flow + summary, adaptive difficulty, XP/levels, 15 achievements, cosmetic avatars | Done |
 | 5. Progress dashboard (Swift Charts: overall history, daily activity, categories, period performance, records, improvement), synthesized sounds, haptics, settings toggles | Done |
-| 6. Unit tests (FitnaKit: scoring, difficulty, progression, planners, every generator × 10 levels × many seeds), app integration tests, UI smoke tests, app icon, launch screen, CI + TestFlight workflows | Done — first device test pending |
+| 6. Unit tests (FitnaKit: scoring, difficulty, progression, planners, every generator × 10 levels × many seeds), app integration tests, UI smoke tests, app icon, launch screen, CI + TestFlight workflows | Done — build 1.0 (2) uploaded to TestFlight on 2026-10-25 |
 
 ## Verified
 
