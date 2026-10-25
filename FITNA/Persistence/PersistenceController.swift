@@ -7,6 +7,10 @@ enum PersistenceController {
     /// on-disk store can't be opened, so the app always launches.
     static func makeContainer(inMemory: Bool = false) -> ModelContainer {
         let schema = Schema(versionedSchema: SchemaV1.self)
+        // SwiftData doesn't always create Application Support on first launch.
+        if !inMemory, let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first {
+            try? FileManager.default.createDirectory(at: support, withIntermediateDirectories: true)
+        }
         let config = ModelConfiguration("FITNA", schema: schema, isStoredInMemoryOnly: inMemory)
         do {
             return try ModelContainer(for: schema, migrationPlan: FitnaMigrationPlan.self, configurations: [config])
