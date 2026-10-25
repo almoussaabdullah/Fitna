@@ -47,7 +47,7 @@ open FITNA.xcodeproj
 ## CI / TestFlight
 
 - `Build & Test` (every push): FitnaKit tests, simulator build, app unit tests, UI smoke tests.
-- `TestFlight` (manual run or `v*` tag): archive with automatic cloud signing and upload.
+- `TestFlight` (manual run, push to `release`, or `v*` tag): archive with automatic cloud signing and upload.
   Needs repository secrets `APPLE_TEAM_ID`, `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_PRIVATE_KEY`
   and an App Store Connect app record for `agency.go360.fitna`.
 
