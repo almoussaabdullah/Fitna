@@ -1,0 +1,1063 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		026BBB7A357CF8FB82729078 /* GameRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC1F5426080BF74195F163 /* GameRecorder.swift */; };
+		0505AEF5FDB54AC313732B8D /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19276D5B66408DA2BF73A31 /* GamesView.swift */; };
+		06403638EB7D718F924B5672 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529C14AB77F222DA94FE788 /* ProfileView.swift */; };
+		0A8E139D7DF6F2F1460BC1F7 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE988CE8CED2FA0BCA34E3 /* BalanceViewModel.swift */; };
+		12EA1598DC6123DBE8C8100F /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC04B72789F87A7158F8968 /* PersistenceController.swift */; };
+		19D191F3A8F623C4612BA548 /* SchemaV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA10F9A081651FD424134F3 /* SchemaV1.swift */; };
+		2D45E16684B6074125A96EA3 /* BrainTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D441AAB8B717EC52D91B362 /* BrainTestView.swift */; };
+		2F511A9E283EC60B6F411E5A /* DailyWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F477BE1CC8B163B66FC86FA /* DailyWorkoutView.swift */; };
+		346AA114D426A419C3F90831 /* StroopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B94A66C0BD989F03D80B91 /* StroopView.swift */; };
+		3663DF99C4FC5DB9F5FDAEC7 /* ProgressDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194BD50189E7C9634520ABB1 /* ProgressDashboardView.swift */; };
+		3BC88BD133E248DCBC8C3A64 /* MissingObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14066A9B0B1C9C0C69BC14 /* MissingObjectView.swift */; };
+		4E72814E91897E5619606A5D /* FitnaKit in Frameworks */ = {isa = PBXBuildFile; productRef = C279751A0714DB3AEAD9CB4F /* FitnaKit */; };
+		53152118772AEEA590744F1B /* Tajawal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0546768D0EF6E02F9B6B8448 /* Tajawal-Bold.ttf */; };
+		543C9334753AE3D99B7A1214 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606C7C787755CA2885B81FE /* RootView.swift */; };
+		5A7F290229037E1D8BE9BDFC /* SortingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35650D3C87C5CD71FE41E5AC /* SortingViewModel.swift */; };
+		6427CB1170976B6E1DA066AA /* BallTrackingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A8F30303B5F429CF3A4DFE /* BallTrackingScene.swift */; };
+		646CD885157952D867CAE950 /* PlayerOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE4716706AF775561DCBBD9 /* PlayerOverview.swift */; };
+		64D3FC0CD0443ADBC5E5B490 /* StroopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F270207C2CDB4B04C1E0CBB7 /* StroopViewModel.swift */; };
+		66AC86153AFCDF9DA665F740 /* MissingNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1DB3343AE45FAA3238764 /* MissingNumberViewModel.swift */; };
+		68EED96A3247D5C57605691E /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330FB9E3CD02CC989CFD4B7D /* BalanceView.swift */; };
+		6E7BA0DC282A2E7D08EF8B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C62C1F67A17428FBAE10D80 /* Assets.xcassets */; };
+		71EBB6589E9027E12AA82E99 /* Tajawal-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10FB4C2A5C7EFA50D95E3B33 /* Tajawal-ExtraBold.ttf */; };
+		7D781CB5DB574B56DFF03CBC /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1E4542381A6012550A454788 /* OFL.txt */; };
+		80BB04F305A68AF587155554 /* ValueComparisonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F37C82E6BBC140A3623216 /* ValueComparisonViewModel.swift */; };
+		889FF2AD373524289B67084D /* FitnaKit in Frameworks */ = {isa = PBXBuildFile; productRef = A187253583D1400D76D3E623 /* FitnaKit */; };
+		8929641ACDF83880993C8F96 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5619FA810D9BD2C67A5BFBEA /* OnboardingView.swift */; };
+		8A2DD71BBC55BC9308E1B1E5 /* FITNAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77171ED7322AA26BC4EA284 /* FITNAUITests.swift */; };
+		8F4CE1F5BA71946533212588 /* NumberMemoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8960A22173CD0BBE0AB7D8 /* NumberMemoryViewModel.swift */; };
+		8F61C4BBBF7B8C6718F421CB /* PatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B775A36204D02979DEECCAF /* PatternView.swift */; };
+		8F7100470526132507265ACA /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55CF9CB4457963688EAE7784 /* Tajawal-Medium.ttf */; };
+		916D8D366E80305301FA017E /* GameResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF4CDBC72B988ABA0BA8986 /* GameResultsView.swift */; };
+		9406FC1B43E9283DE3F7F53C /* ValueComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E27FA71FAA0B115A62E58 /* ValueComparisonView.swift */; };
+		959FFEEFA01FFAE818448A47 /* NumberMemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A98397531054F08205B302 /* NumberMemoryView.swift */; };
+		9DCADC6F0992ACC97C7794CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA748CA58894BE95A4568B30 /* Localizable.strings */; };
+		A572ED00AA8EEABA81D8C0C9 /* BallTrackingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B59E70FC5EDC1F1FEBC88B /* BallTrackingViewModel.swift */; };
+		A592005DA4DA799C3D7749E1 /* MentalMathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295ED77BD5C37DCE3B8C2A20 /* MentalMathView.swift */; };
+		A877605662E2E3814BB0901A /* FitnaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FD702A5045410519F4B53 /* FitnaApp.swift */; };
+		A95DA0B851C4BE337B7F5A5E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2393D362491795FAC979FB /* Theme.swift */; };
+		AB66AB67F0A21A7DA6DE879B /* OddOneOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C2170318FF7462D5E3136 /* OddOneOutView.swift */; };
+		ABB748D6A22D2C6F24DFCCDA /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F578430CF967DD5B02108329 /* Localization.swift */; };
+		AC382C44A62D9ED18E4415B5 /* NumberPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB266D1D778C2338E5C5AB1 /* NumberPad.swift */; };
+		B296C2E0AA750301B831C30B /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37964F8B64457AAD1640E0A /* GameViewModel.swift */; };
+		B3A53484E32045301A40DCDB /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6831EDF4E7D76652B722E /* Feedback.swift */; };
+		B61B8979796460EDC220C4D6 /* MentalMathViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E09F6401856ABF0ED3CF00 /* MentalMathViewModel.swift */; };
+		BA765F09D2BDEE71F4D1E5A7 /* GameHostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD942359521A9FAB22268E0 /* GameHostView.swift */; };
+		D0625509FA06AF85AD15C435 /* CardMatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8297DC99681EE7BE05389 /* CardMatchingViewModel.swift */; };
+		D3A2B77569D3A2D487D47273 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574BAA2527D71D9523EB1C04 /* HomeView.swift */; };
+		D96ED7F6D13D2BE885A64137 /* CardMatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210678228BADCABE486DDE2D /* CardMatchingView.swift */; };
+		DDF809CF445503F49F1558C8 /* MissingNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7151C8AAE95BA70ED453CE3 /* MissingNumberView.swift */; };
+		DF1B01F944983D1778124A2F /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9CBBDA22850E8A97011EB /* PersistenceTests.swift */; };
+		DFA44F45E1CD4D8102818F45 /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CCDC77B58692E73BD645F85 /* Tajawal-Regular.ttf */; };
+		E30642771CC341991969FBE1 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F64C0379A996D36337FCB2 /* Components.swift */; };
+		E6ADFE147A8A1EA17BD6498B /* PatternViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4528308CD0566BC08D848B2 /* PatternViewModel.swift */; };
+		F673AEF93E820A5E2976313E /* MissingObjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2860F4289A32DFCAF7E5F /* MissingObjectViewModel.swift */; };
+		F881DD055D1D493A6E032B0B /* BallTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA689F4E5999BBED21FDD1 /* BallTrackingView.swift */; };
+		F93F7A5337941B61553F2F39 /* OddOneOutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219FEC8C7043634CDCE1D3C /* OddOneOutViewModel.swift */; };
+		FF93504F83B7F82348876706 /* SortingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C0E5E57054CAC60C04817 /* SortingView.swift */; };
+		FFB8C5EE68351A309B9B56D0 /* GameTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988493883B989D9EA10B972 /* GameTutorialView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB52FFA11A71B42C9454F542 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08134B4B82454A4F067DE116 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2131FD63A609318290474DC8;
+			remoteInfo = FITNA;
+		};
+		AEAECD87E069C72D86C5C755 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08134B4B82454A4F067DE116 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2131FD63A609318290474DC8;
+			remoteInfo = FITNA;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0546768D0EF6E02F9B6B8448 /* Tajawal-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Bold.ttf"; sourceTree = "<group>"; };
+		0606C7C787755CA2885B81FE /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		0F7FD702A5045410519F4B53 /* FitnaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnaApp.swift; sourceTree = "<group>"; };
+		10FB4C2A5C7EFA50D95E3B33 /* Tajawal-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-ExtraBold.ttf"; sourceTree = "<group>"; };
+		15C9CBBDA22850E8A97011EB /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
+		16F64C0379A996D36337FCB2 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		194BD50189E7C9634520ABB1 /* ProgressDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDashboardView.swift; sourceTree = "<group>"; };
+		1E4542381A6012550A454788 /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		20B59E70FC5EDC1F1FEBC88B /* BallTrackingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallTrackingViewModel.swift; sourceTree = "<group>"; };
+		210678228BADCABE486DDE2D /* CardMatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMatchingView.swift; sourceTree = "<group>"; };
+		295ED77BD5C37DCE3B8C2A20 /* MentalMathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalMathView.swift; sourceTree = "<group>"; };
+		2C2393D362491795FAC979FB /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		330FB9E3CD02CC989CFD4B7D /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		35650D3C87C5CD71FE41E5AC /* SortingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingViewModel.swift; sourceTree = "<group>"; };
+		366C0E5E57054CAC60C04817 /* SortingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingView.swift; sourceTree = "<group>"; };
+		3D18FBFE644D44D735821E0C /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3D441AAB8B717EC52D91B362 /* BrainTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainTestView.swift; sourceTree = "<group>"; };
+		3EB266D1D778C2338E5C5AB1 /* NumberPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPad.swift; sourceTree = "<group>"; };
+		3F14066A9B0B1C9C0C69BC14 /* MissingObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingObjectView.swift; sourceTree = "<group>"; };
+		3F2B3EFCCFB64C0A377B3D6F /* FITNATests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FITNATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C62C1F67A17428FBAE10D80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CB6831EDF4E7D76652B722E /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		4CBA689F4E5999BBED21FDD1 /* BallTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallTrackingView.swift; sourceTree = "<group>"; };
+		4FE4716706AF775561DCBBD9 /* PlayerOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerOverview.swift; sourceTree = "<group>"; };
+		55CF9CB4457963688EAE7784 /* Tajawal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Medium.ttf"; sourceTree = "<group>"; };
+		5619FA810D9BD2C67A5BFBEA /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		574BAA2527D71D9523EB1C04 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5B5C2170318FF7462D5E3136 /* OddOneOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddOneOutView.swift; sourceTree = "<group>"; };
+		5B775A36204D02979DEECCAF /* PatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternView.swift; sourceTree = "<group>"; };
+		5BD1DB3343AE45FAA3238764 /* MissingNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNumberViewModel.swift; sourceTree = "<group>"; };
+		5CA10F9A081651FD424134F3 /* SchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaV1.swift; sourceTree = "<group>"; };
+		64A2A89E65FDFBE639976CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6F477BE1CC8B163B66FC86FA /* DailyWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWorkoutView.swift; sourceTree = "<group>"; };
+		70B94A66C0BD989F03D80B91 /* StroopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StroopView.swift; sourceTree = "<group>"; };
+		76F37C82E6BBC140A3623216 /* ValueComparisonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueComparisonViewModel.swift; sourceTree = "<group>"; };
+		78FC1F5426080BF74195F163 /* GameRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRecorder.swift; sourceTree = "<group>"; };
+		7CCDC77B58692E73BD645F85 /* Tajawal-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Regular.ttf"; sourceTree = "<group>"; };
+		81A56A4931F7BCED9D9F6B47 /* FitnaKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FitnaKit; path = Packages/FitnaKit; sourceTree = SOURCE_ROOT; };
+		86A8F30303B5F429CF3A4DFE /* BallTrackingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallTrackingScene.swift; sourceTree = "<group>"; };
+		94E2860F4289A32DFCAF7E5F /* MissingObjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingObjectViewModel.swift; sourceTree = "<group>"; };
+		9A8960A22173CD0BBE0AB7D8 /* NumberMemoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMemoryViewModel.swift; sourceTree = "<group>"; };
+		9BD942359521A9FAB22268E0 /* GameHostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHostView.swift; sourceTree = "<group>"; };
+		9D6E27FA71FAA0B115A62E58 /* ValueComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueComparisonView.swift; sourceTree = "<group>"; };
+		AFD8297DC99681EE7BE05389 /* CardMatchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMatchingViewModel.swift; sourceTree = "<group>"; };
+		B19276D5B66408DA2BF73A31 /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
+		B77171ED7322AA26BC4EA284 /* FITNAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITNAUITests.swift; sourceTree = "<group>"; };
+		B7A98397531054F08205B302 /* NumberMemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMemoryView.swift; sourceTree = "<group>"; };
+		C37964F8B64457AAD1640E0A /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		C4528308CD0566BC08D848B2 /* PatternViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternViewModel.swift; sourceTree = "<group>"; };
+		C9C57DFFED6EFCCF86AF05CD /* FITNA.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FITNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBE988CE8CED2FA0BCA34E3 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
+		E1E09F6401856ABF0ED3CF00 /* MentalMathViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalMathViewModel.swift; sourceTree = "<group>"; };
+		E219FEC8C7043634CDCE1D3C /* OddOneOutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddOneOutViewModel.swift; sourceTree = "<group>"; };
+		E988493883B989D9EA10B972 /* GameTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTutorialView.swift; sourceTree = "<group>"; };
+		EAC04B72789F87A7158F8968 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		EAF4CDBC72B988ABA0BA8986 /* GameResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultsView.swift; sourceTree = "<group>"; };
+		F270207C2CDB4B04C1E0CBB7 /* StroopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StroopViewModel.swift; sourceTree = "<group>"; };
+		F529C14AB77F222DA94FE788 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F578430CF967DD5B02108329 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		F7151C8AAE95BA70ED453CE3 /* MissingNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNumberView.swift; sourceTree = "<group>"; };
+		FE0CFDDFC4F66D76AF68E935 /* FITNAUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FITNAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59803C0C90E27EF196B02BBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				889FF2AD373524289B67084D /* FitnaKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E811C7E1CDC2EDE3AF0DFC54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E72814E91897E5619606A5D /* FitnaKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01E90D122D18B41DDECEBA45 /* MissingNumber */ = {
+			isa = PBXGroup;
+			children = (
+				F7151C8AAE95BA70ED453CE3 /* MissingNumberView.swift */,
+				5BD1DB3343AE45FAA3238764 /* MissingNumberViewModel.swift */,
+			);
+			path = MissingNumber;
+			sourceTree = "<group>";
+		};
+		041B57D2014DFA778D72893D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5CA10F9A081651FD424134F3 /* SchemaV1.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		09AC289A5F93EF4B65A94B41 /* DailyWorkout */ = {
+			isa = PBXGroup;
+			children = (
+				6F477BE1CC8B163B66FC86FA /* DailyWorkoutView.swift */,
+			);
+			path = DailyWorkout;
+			sourceTree = "<group>";
+		};
+		0B3E1C4D019F68BB220E511D /* PatternCompletion */ = {
+			isa = PBXGroup;
+			children = (
+				5B775A36204D02979DEECCAF /* PatternView.swift */,
+				C4528308CD0566BC08D848B2 /* PatternViewModel.swift */,
+			);
+			path = PatternCompletion;
+			sourceTree = "<group>";
+		};
+		0DCB213AC12605E6DB5A7B63 /* CardMatching */ = {
+			isa = PBXGroup;
+			children = (
+				210678228BADCABE486DDE2D /* CardMatchingView.swift */,
+				AFD8297DC99681EE7BE05389 /* CardMatchingViewModel.swift */,
+			);
+			path = CardMatching;
+			sourceTree = "<group>";
+		};
+		138EE896383666FC690CC12B /* BrainAssessment */ = {
+			isa = PBXGroup;
+			children = (
+				3D441AAB8B717EC52D91B362 /* BrainTestView.swift */,
+			);
+			path = BrainAssessment;
+			sourceTree = "<group>";
+		};
+		2048AFECBF7EDA6FAB788253 /* BallTracking */ = {
+			isa = PBXGroup;
+			children = (
+				86A8F30303B5F429CF3A4DFE /* BallTrackingScene.swift */,
+				4CBA689F4E5999BBED21FDD1 /* BallTrackingView.swift */,
+				20B59E70FC5EDC1F1FEBC88B /* BallTrackingViewModel.swift */,
+			);
+			path = BallTracking;
+			sourceTree = "<group>";
+		};
+		20E99AA96F1A7E60C1CAA339 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C62C1F67A17428FBAE10D80 /* Assets.xcassets */,
+				981DC0B074956EE98FE7CB59 /* Fonts */,
+				CA748CA58894BE95A4568B30 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		24B26973E6B1940BAB4AC954 /* SortingChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				366C0E5E57054CAC60C04817 /* SortingView.swift */,
+				35650D3C87C5CD71FE41E5AC /* SortingViewModel.swift */,
+			);
+			path = SortingChallenge;
+			sourceTree = "<group>";
+		};
+		282F62DA6D446EAA768B3357 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0F7FD702A5045410519F4B53 /* FitnaApp.swift */,
+				0606C7C787755CA2885B81FE /* RootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2C478F7761E3A6E5B7A98038 /* BalanceLogic */ = {
+			isa = PBXGroup;
+			children = (
+				330FB9E3CD02CC989CFD4B7D /* BalanceView.swift */,
+				CEBE988CE8CED2FA0BCA34E3 /* BalanceViewModel.swift */,
+			);
+			path = BalanceLogic;
+			sourceTree = "<group>";
+		};
+		3D4A5300790637790826CC62 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F578430CF967DD5B02108329 /* Localization.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		47B20D9ACD2F760A8C7725BE /* MentalMath */ = {
+			isa = PBXGroup;
+			children = (
+				295ED77BD5C37DCE3B8C2A20 /* MentalMathView.swift */,
+				E1E09F6401856ABF0ED3CF00 /* MentalMathViewModel.swift */,
+			);
+			path = MentalMath;
+			sourceTree = "<group>";
+		};
+		4F6BD7AC9F0B62723620C6AC /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				81A56A4931F7BCED9D9F6B47 /* FitnaKit */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		531C300234123BDFCF7DD526 = {
+			isa = PBXGroup;
+			children = (
+				8FB00103A55ECC9FAFA9A854 /* FITNA */,
+				E57180DEC47A1BA20B0E83B1 /* FITNATests */,
+				EA21BE9CF5D3DD4E87D5FFD2 /* FITNAUITests */,
+				4F6BD7AC9F0B62723620C6AC /* Packages */,
+				D21C4DF30A36C436D1BF86C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5453C28C2391067842C172CE /* NumberMemory */ = {
+			isa = PBXGroup;
+			children = (
+				B7A98397531054F08205B302 /* NumberMemoryView.swift */,
+				9A8960A22173CD0BBE0AB7D8 /* NumberMemoryViewModel.swift */,
+			);
+			path = NumberMemory;
+			sourceTree = "<group>";
+		};
+		5780C61BFCEAFEC7A807A1C0 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				138EE896383666FC690CC12B /* BrainAssessment */,
+				09AC289A5F93EF4B65A94B41 /* DailyWorkout */,
+				8CD91B653DD8C6241175A16D /* Games */,
+				E411FC4C0ECBA050E60AD178 /* Home */,
+				DE5BC9584757E18F717C4C08 /* Onboarding */,
+				D5A6BBEFF7219AB4B25FE182 /* Profile */,
+				A0FB42744A62747545827861 /* Progress */,
+				85ABAA78F0EF4F0CC38DC033 /* Shared */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		6B312DCA671E13846D2512D4 /* MissingObject */ = {
+			isa = PBXGroup;
+			children = (
+				3F14066A9B0B1C9C0C69BC14 /* MissingObjectView.swift */,
+				94E2860F4289A32DFCAF7E5F /* MissingObjectViewModel.swift */,
+			);
+			path = MissingObject;
+			sourceTree = "<group>";
+		};
+		7B7822677634DAA61EBC33C5 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				2C2393D362491795FAC979FB /* Theme.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		83A0386332D6B1527221A22F /* MiniGames */ = {
+			isa = PBXGroup;
+			children = (
+				2C478F7761E3A6E5B7A98038 /* BalanceLogic */,
+				2048AFECBF7EDA6FAB788253 /* BallTracking */,
+				0DCB213AC12605E6DB5A7B63 /* CardMatching */,
+				47B20D9ACD2F760A8C7725BE /* MentalMath */,
+				01E90D122D18B41DDECEBA45 /* MissingNumber */,
+				6B312DCA671E13846D2512D4 /* MissingObject */,
+				5453C28C2391067842C172CE /* NumberMemory */,
+				D5F1AF976E9DCBCF600C2306 /* OddOneOut */,
+				0B3E1C4D019F68BB220E511D /* PatternCompletion */,
+				FD4DBFA3046EA120801B89AD /* Shared */,
+				24B26973E6B1940BAB4AC954 /* SortingChallenge */,
+				943EE39E7DB432C138FD1D1B /* StroopChallenge */,
+				B89AE335BFF9C5C330C519E4 /* ValueComparison */,
+			);
+			path = MiniGames;
+			sourceTree = "<group>";
+		};
+		85ABAA78F0EF4F0CC38DC033 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4FE4716706AF775561DCBBD9 /* PlayerOverview.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8CD91B653DD8C6241175A16D /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				B19276D5B66408DA2BF73A31 /* GamesView.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		8FB00103A55ECC9FAFA9A854 /* FITNA */ = {
+			isa = PBXGroup;
+			children = (
+				282F62DA6D446EAA768B3357 /* App */,
+				F3EC821989AB0F4FC54AEEB4 /* Components */,
+				3D4A5300790637790826CC62 /* Core */,
+				7B7822677634DAA61EBC33C5 /* DesignSystem */,
+				5780C61BFCEAFEC7A807A1C0 /* Features */,
+				AE2B5F009C675435394CABC7 /* Generated */,
+				83A0386332D6B1527221A22F /* MiniGames */,
+				041B57D2014DFA778D72893D /* Models */,
+				D8097EA945B812E8EC98D681 /* Persistence */,
+				20E99AA96F1A7E60C1CAA339 /* Resources */,
+				E8031E5DF0B532F96EE32798 /* Services */,
+			);
+			path = FITNA;
+			sourceTree = "<group>";
+		};
+		943EE39E7DB432C138FD1D1B /* StroopChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				70B94A66C0BD989F03D80B91 /* StroopView.swift */,
+				F270207C2CDB4B04C1E0CBB7 /* StroopViewModel.swift */,
+			);
+			path = StroopChallenge;
+			sourceTree = "<group>";
+		};
+		981DC0B074956EE98FE7CB59 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1E4542381A6012550A454788 /* OFL.txt */,
+				0546768D0EF6E02F9B6B8448 /* Tajawal-Bold.ttf */,
+				10FB4C2A5C7EFA50D95E3B33 /* Tajawal-ExtraBold.ttf */,
+				55CF9CB4457963688EAE7784 /* Tajawal-Medium.ttf */,
+				7CCDC77B58692E73BD645F85 /* Tajawal-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A0FB42744A62747545827861 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				194BD50189E7C9634520ABB1 /* ProgressDashboardView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		AE2B5F009C675435394CABC7 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				64A2A89E65FDFBE639976CD8 /* Info.plist */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		B89AE335BFF9C5C330C519E4 /* ValueComparison */ = {
+			isa = PBXGroup;
+			children = (
+				9D6E27FA71FAA0B115A62E58 /* ValueComparisonView.swift */,
+				76F37C82E6BBC140A3623216 /* ValueComparisonViewModel.swift */,
+			);
+			path = ValueComparison;
+			sourceTree = "<group>";
+		};
+		D21C4DF30A36C436D1BF86C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9C57DFFED6EFCCF86AF05CD /* FITNA.app */,
+				3F2B3EFCCFB64C0A377B3D6F /* FITNATests.xctest */,
+				FE0CFDDFC4F66D76AF68E935 /* FITNAUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5A6BBEFF7219AB4B25FE182 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F529C14AB77F222DA94FE788 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D5F1AF976E9DCBCF600C2306 /* OddOneOut */ = {
+			isa = PBXGroup;
+			children = (
+				5B5C2170318FF7462D5E3136 /* OddOneOutView.swift */,
+				E219FEC8C7043634CDCE1D3C /* OddOneOutViewModel.swift */,
+			);
+			path = OddOneOut;
+			sourceTree = "<group>";
+		};
+		D8097EA945B812E8EC98D681 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				EAC04B72789F87A7158F8968 /* PersistenceController.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		DE5BC9584757E18F717C4C08 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				5619FA810D9BD2C67A5BFBEA /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E411FC4C0ECBA050E60AD178 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				574BAA2527D71D9523EB1C04 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E57180DEC47A1BA20B0E83B1 /* FITNATests */ = {
+			isa = PBXGroup;
+			children = (
+				15C9CBBDA22850E8A97011EB /* PersistenceTests.swift */,
+			);
+			path = FITNATests;
+			sourceTree = "<group>";
+		};
+		E8031E5DF0B532F96EE32798 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4CB6831EDF4E7D76652B722E /* Feedback.swift */,
+				78FC1F5426080BF74195F163 /* GameRecorder.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EA21BE9CF5D3DD4E87D5FFD2 /* FITNAUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B77171ED7322AA26BC4EA284 /* FITNAUITests.swift */,
+			);
+			path = FITNAUITests;
+			sourceTree = "<group>";
+		};
+		F3EC821989AB0F4FC54AEEB4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				16F64C0379A996D36337FCB2 /* Components.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FD4DBFA3046EA120801B89AD /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9BD942359521A9FAB22268E0 /* GameHostView.swift */,
+				EAF4CDBC72B988ABA0BA8986 /* GameResultsView.swift */,
+				E988493883B989D9EA10B972 /* GameTutorialView.swift */,
+				C37964F8B64457AAD1640E0A /* GameViewModel.swift */,
+				3EB266D1D778C2338E5C5AB1 /* NumberPad.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2131FD63A609318290474DC8 /* FITNA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAAC2D77733BFF131B75D500 /* Build configuration list for PBXNativeTarget "FITNA" */;
+			buildPhases = (
+				E451FFB164D0E8FCF33CC9B1 /* Sources */,
+				EA3A4979642FD1D8AC362093 /* Resources */,
+				E811C7E1CDC2EDE3AF0DFC54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FITNA;
+			packageProductDependencies = (
+				C279751A0714DB3AEAD9CB4F /* FitnaKit */,
+			);
+			productName = FITNA;
+			productReference = C9C57DFFED6EFCCF86AF05CD /* FITNA.app */;
+			productType = "com.apple.product-type.application";
+		};
+		25CFDC1B410E8CB2A94CBFD5 /* FITNAUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47DAA027824782743BFEA7B2 /* Build configuration list for PBXNativeTarget "FITNAUITests" */;
+			buildPhases = (
+				A7F1BBB502C5399035774627 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F0715C61785C3BCD011F8BC /* PBXTargetDependency */,
+			);
+			name = FITNAUITests;
+			packageProductDependencies = (
+			);
+			productName = FITNAUITests;
+			productReference = FE0CFDDFC4F66D76AF68E935 /* FITNAUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		BD32C94F433E02BD10F64673 /* FITNATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FD331046160E85C83E028C3 /* Build configuration list for PBXNativeTarget "FITNATests" */;
+			buildPhases = (
+				1834498548A058C586014E1F /* Sources */,
+				59803C0C90E27EF196B02BBF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F32AA6C595AC612DA47873EB /* PBXTargetDependency */,
+			);
+			name = FITNATests;
+			packageProductDependencies = (
+				A187253583D1400D76D3E623 /* FitnaKit */,
+			);
+			productName = FITNATests;
+			productReference = 3F2B3EFCCFB64C0A377B3D6F /* FITNATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08134B4B82454A4F067DE116 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					2131FD63A609318290474DC8 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					25CFDC1B410E8CB2A94CBFD5 = {
+						DevelopmentTeam = "";
+						TestTargetID = 2131FD63A609318290474DC8;
+					};
+					BD32C94F433E02BD10F64673 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 58C421B61BC8DD82311C49A4 /* Build configuration list for PBXProject "FITNA" */;
+			developmentRegion = ar;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				ar,
+			);
+			mainGroup = 531C300234123BDFCF7DD526;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				160EE8AD0EC7A45759F0AD3F /* XCLocalSwiftPackageReference "Packages/FitnaKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D21C4DF30A36C436D1BF86C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2131FD63A609318290474DC8 /* FITNA */,
+				BD32C94F433E02BD10F64673 /* FITNATests */,
+				25CFDC1B410E8CB2A94CBFD5 /* FITNAUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA3A4979642FD1D8AC362093 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7BA0DC282A2E7D08EF8B99 /* Assets.xcassets in Resources */,
+				9DCADC6F0992ACC97C7794CB /* Localizable.strings in Resources */,
+				7D781CB5DB574B56DFF03CBC /* OFL.txt in Resources */,
+				53152118772AEEA590744F1B /* Tajawal-Bold.ttf in Resources */,
+				71EBB6589E9027E12AA82E99 /* Tajawal-ExtraBold.ttf in Resources */,
+				8F7100470526132507265ACA /* Tajawal-Medium.ttf in Resources */,
+				DFA44F45E1CD4D8102818F45 /* Tajawal-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1834498548A058C586014E1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF1B01F944983D1778124A2F /* PersistenceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F1BBB502C5399035774627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A2DD71BBC55BC9308E1B1E5 /* FITNAUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E451FFB164D0E8FCF33CC9B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68EED96A3247D5C57605691E /* BalanceView.swift in Sources */,
+				0A8E139D7DF6F2F1460BC1F7 /* BalanceViewModel.swift in Sources */,
+				6427CB1170976B6E1DA066AA /* BallTrackingScene.swift in Sources */,
+				F881DD055D1D493A6E032B0B /* BallTrackingView.swift in Sources */,
+				A572ED00AA8EEABA81D8C0C9 /* BallTrackingViewModel.swift in Sources */,
+				2D45E16684B6074125A96EA3 /* BrainTestView.swift in Sources */,
+				D96ED7F6D13D2BE885A64137 /* CardMatchingView.swift in Sources */,
+				D0625509FA06AF85AD15C435 /* CardMatchingViewModel.swift in Sources */,
+				E30642771CC341991969FBE1 /* Components.swift in Sources */,
+				2F511A9E283EC60B6F411E5A /* DailyWorkoutView.swift in Sources */,
+				B3A53484E32045301A40DCDB /* Feedback.swift in Sources */,
+				A877605662E2E3814BB0901A /* FitnaApp.swift in Sources */,
+				BA765F09D2BDEE71F4D1E5A7 /* GameHostView.swift in Sources */,
+				026BBB7A357CF8FB82729078 /* GameRecorder.swift in Sources */,
+				916D8D366E80305301FA017E /* GameResultsView.swift in Sources */,
+				FFB8C5EE68351A309B9B56D0 /* GameTutorialView.swift in Sources */,
+				B296C2E0AA750301B831C30B /* GameViewModel.swift in Sources */,
+				0505AEF5FDB54AC313732B8D /* GamesView.swift in Sources */,
+				D3A2B77569D3A2D487D47273 /* HomeView.swift in Sources */,
+				ABB748D6A22D2C6F24DFCCDA /* Localization.swift in Sources */,
+				A592005DA4DA799C3D7749E1 /* MentalMathView.swift in Sources */,
+				B61B8979796460EDC220C4D6 /* MentalMathViewModel.swift in Sources */,
+				DDF809CF445503F49F1558C8 /* MissingNumberView.swift in Sources */,
+				66AC86153AFCDF9DA665F740 /* MissingNumberViewModel.swift in Sources */,
+				3BC88BD133E248DCBC8C3A64 /* MissingObjectView.swift in Sources */,
+				F673AEF93E820A5E2976313E /* MissingObjectViewModel.swift in Sources */,
+				959FFEEFA01FFAE818448A47 /* NumberMemoryView.swift in Sources */,
+				8F4CE1F5BA71946533212588 /* NumberMemoryViewModel.swift in Sources */,
+				AC382C44A62D9ED18E4415B5 /* NumberPad.swift in Sources */,
+				AB66AB67F0A21A7DA6DE879B /* OddOneOutView.swift in Sources */,
+				F93F7A5337941B61553F2F39 /* OddOneOutViewModel.swift in Sources */,
+				8929641ACDF83880993C8F96 /* OnboardingView.swift in Sources */,
+				8F61C4BBBF7B8C6718F421CB /* PatternView.swift in Sources */,
+				E6ADFE147A8A1EA17BD6498B /* PatternViewModel.swift in Sources */,
+				12EA1598DC6123DBE8C8100F /* PersistenceController.swift in Sources */,
+				646CD885157952D867CAE950 /* PlayerOverview.swift in Sources */,
+				06403638EB7D718F924B5672 /* ProfileView.swift in Sources */,
+				3663DF99C4FC5DB9F5FDAEC7 /* ProgressDashboardView.swift in Sources */,
+				543C9334753AE3D99B7A1214 /* RootView.swift in Sources */,
+				19D191F3A8F623C4612BA548 /* SchemaV1.swift in Sources */,
+				FF93504F83B7F82348876706 /* SortingView.swift in Sources */,
+				5A7F290229037E1D8BE9BDFC /* SortingViewModel.swift in Sources */,
+				346AA114D426A419C3F90831 /* StroopView.swift in Sources */,
+				64D3FC0CD0443ADBC5E5B490 /* StroopViewModel.swift in Sources */,
+				A95DA0B851C4BE337B7F5A5E /* Theme.swift in Sources */,
+				9406FC1B43E9283DE3F7F53C /* ValueComparisonView.swift in Sources */,
+				80BB04F305A68AF587155554 /* ValueComparisonViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F0715C61785C3BCD011F8BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2131FD63A609318290474DC8 /* FITNA */;
+			targetProxy = AEAECD87E069C72D86C5C755 /* PBXContainerItemProxy */;
+		};
+		F32AA6C595AC612DA47873EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2131FD63A609318290474DC8 /* FITNA */;
+			targetProxy = AB52FFA11A71B42C9454F542 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA748CA58894BE95A4568B30 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D18FBFE644D44D735821E0C /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		143E73CC4C6455BD62211C6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = agency.go360.fitna.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = FITNA;
+			};
+			name = Release;
+		};
+		62203F0DFAA522164655B6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		743A7EFE5880132CE6977BD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = agency.go360.fitna.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FITNA.app/FITNA";
+			};
+			name = Release;
+		};
+		7B56693F7EDD0A474E493772 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FITNA/Generated/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = agency.go360.fitna;
+				PRODUCT_NAME = FITNA;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		978F6FE5B4094DAC8CAEAD6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = agency.go360.fitna.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FITNA.app/FITNA";
+			};
+			name = Debug;
+		};
+		A6A4883EB72499EB5A94B0BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E3E316FD1F99EBFC9C5703DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FITNA/Generated/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = agency.go360.fitna;
+				PRODUCT_NAME = FITNA;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F3301B49CB5272C3801E7E34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = agency.go360.fitna.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = FITNA;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FD331046160E85C83E028C3 /* Build configuration list for PBXNativeTarget "FITNATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				978F6FE5B4094DAC8CAEAD6D /* Debug */,
+				743A7EFE5880132CE6977BD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		47DAA027824782743BFEA7B2 /* Build configuration list for PBXNativeTarget "FITNAUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3301B49CB5272C3801E7E34 /* Debug */,
+				143E73CC4C6455BD62211C6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		58C421B61BC8DD82311C49A4 /* Build configuration list for PBXProject "FITNA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6A4883EB72499EB5A94B0BE /* Debug */,
+				62203F0DFAA522164655B6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EAAC2D77733BFF131B75D500 /* Build configuration list for PBXNativeTarget "FITNA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B56693F7EDD0A474E493772 /* Debug */,
+				E3E316FD1F99EBFC9C5703DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		160EE8AD0EC7A45759F0AD3F /* XCLocalSwiftPackageReference "Packages/FitnaKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/FitnaKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A187253583D1400D76D3E623 /* FitnaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FitnaKit;
+		};
+		C279751A0714DB3AEAD9CB4F /* FitnaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FitnaKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 08134B4B82454A4F067DE116 /* Project object */;
+}

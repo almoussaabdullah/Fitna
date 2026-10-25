@@ -20,6 +20,7 @@ public struct NumberMemoryEngine: GameEngine {
     private var rng: AnyRNG
 
     public static let minimumLength = 3
+    public static let maximumLength = 14
 
     public var maxTrials: Int { length == .standard ? 10 : 5 }
     public var maxMistakes: Int { length == .standard ? 3 : 2 }
@@ -69,7 +70,7 @@ public struct NumberMemoryEngine: GameEngine {
         if isCorrect {
             longestRecalled = max(longestRecalled, currentLength)
             rawScore += Int((Double(currentLength * 10) * levelMultiplier).rounded())
-            currentLength += 1
+            currentLength = min(NumberMemoryEngine.maximumLength, currentLength + 1)
         } else {
             mistakes += 1
             currentLength = max(NumberMemoryEngine.minimumLength, currentLength - 1)

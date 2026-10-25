@@ -1,0 +1,142 @@
+name: TestFlight
+
+# Archives the app with automatic (cloud-managed) signing and uploads it to App Store Connect,
+# where it appears in TestFlight after Apple finishes processing (usually 5–15 minutes).
+#
+# Required repository secrets (Settings → Secrets and variables → Actions):
+#   APPLE_TEAM_ID     — 10-character Team ID (developer.apple.com → Membership)
+#   ASC_KEY_ID        — App Store Connect API key ID
+#   ASC_ISSUER_ID     — App Store Connect API issuer ID
+#   ASC_PRIVATE_KEY   — full contents of the downloaded AuthKey_XXXX.p8 file
+#
+# The app record (bundle ID agency.go360.fitna) must already exist in App Store Connect.
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+concurrency:
+  group: testflight
+  cancel-in-progress: false
+
+env:
+  SCHEME: FITNA
+  PROJECT: FITNA.xcodeproj
+
+jobs:
+  upload:
+    name: Archive & upload to TestFlight
+    runs-on: macos-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check secrets
+        env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          missing=""
+          for name in APPLE_TEAM_ID ASC_KEY_ID ASC_ISSUER_ID ASC_PRIVATE_KEY; do
+            if [ -z "${!name}" ]; then missing="$missing $name"; fi
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::Missing repository secrets:$missing"
+            exit 1
+          fi
+
+      - name: Install App Store Connect API key
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          mkdir -p "$HOME/private_keys"
+          printf '%s\n' "$ASC_PRIVATE_KEY" > "$HOME/private_keys/AuthKey_${ASC_KEY_ID}.p8"
+          chmod 600 "$HOME/private_keys/AuthKey_${ASC_KEY_ID}.p8"
+          echo "AUTH_KEY_PATH=$HOME/private_keys/AuthKey_${ASC_KEY_ID}.p8" >> "$GITHUB_ENV"
+
+      - name: Xcode version
+        run: xcodebuild -version
+
+      - name: Archive (automatic cloud signing)
+        shell: bash
+        env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          set +e
+          mkdir -p build
+          xcodebuild archive \
+            -project "$PROJECT" \
+            -scheme "$SCHEME" \
+            -configuration Release \
+            -destination "generic/platform=iOS" \
+            -archivePath build/FITNA.xcarchive \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$AUTH_KEY_PATH" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
+            DEVELOPMENT_TEAM="$APPLE_TEAM_ID" \
+            CODE_SIGN_STYLE=Automatic \
+            CURRENT_PROJECT_VERSION="${{ github.run_number }}" \
+            2>&1 | tee build/xcodebuild-archive.log | grep -E "error:|warning: .*sign|\*\* ARCHIVE"
+          status="${PIPESTATUS[0]}"
+          grep -hE "error:" build/xcodebuild-archive.log | sort -u | head -30 | while read -r line; do echo "::error::$line"; done
+          echo "::notice title=Archive::exit status $status — $(xcodebuild -version | tr '\n' ' ')"
+          exit "$status"
+
+      - name: Write ExportOptions.plist
+        env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: |
+          cat > build/ExportOptions.plist <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>destination</key><string>upload</string>
+            <key>signingStyle</key><string>automatic</string>
+            <key>teamID</key><string>${APPLE_TEAM_ID}</string>
+            <key>uploadSymbols</key><true/>
+            <key>manageAppVersionAndBuildNumber</key><true/>
+            <key>testFlightInternalTestingOnly</key><false/>
+          </dict>
+          </plist>
+          EOF
+          cat build/ExportOptions.plist
+
+      - name: Export & upload to App Store Connect
+        shell: bash
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          set +e
+          xcodebuild -exportArchive \
+            -archivePath build/FITNA.xcarchive \
+            -exportOptionsPlist build/ExportOptions.plist \
+            -exportPath build/export \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$AUTH_KEY_PATH" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
+            2>&1 | tee build/xcodebuild-export.log | grep -E "error:|Upload|EXPORT"
+          status="${PIPESTATUS[0]}"
+          grep -hE "error:" build/xcodebuild-export.log | sort -u | head -30 | while read -r line; do echo "::error::$line"; done
+          if [ "$status" -eq 0 ]; then
+            echo "::notice title=TestFlight::Uploaded build ${{ github.run_number }} — it appears in TestFlight once Apple finishes processing."
+          fi
+          exit "$status"
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testflight-logs
+          path: build/*.log
+          if-no-files-found: ignore

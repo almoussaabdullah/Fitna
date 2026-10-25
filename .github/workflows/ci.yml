@@ -1,0 +1,94 @@
+name: Build & Test
+
+# Compiles the app for the iOS Simulator, runs the FitnaKit and app test suites on every push.
+# Needs no Apple account or secrets — this is the "does it compile?" gate.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    name: Simulator build + tests
+    runs-on: macos-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Xcode version
+        run: |
+          xcodebuild -version
+          swift --version
+
+      - name: FitnaKit unit tests (game logic)
+        working-directory: Packages/FitnaKit
+        run: swift test 2>&1 | tee ../../fitnakit-tests.log | grep -E "error:|Executed|passed|failed" | tail -40
+
+      - name: Pick a simulator
+        id: sim
+        run: |
+          UDID=$(python3 tools/pick_simulator.py)
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+
+      - name: Build for simulator
+        shell: bash
+        run: |
+          set +e
+          mkdir -p build
+          xcodebuild build-for-testing \
+            -project FITNA.xcodeproj \
+            -scheme FITNA \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
+            2>&1 | tee build/xcodebuild-build.log | grep -E "error:|\*\* BUILD"
+          status="${PIPESTATUS[0]}"
+          grep -hE "error:" build/xcodebuild-build.log | sort -u | head -40 | while read -r line; do echo "::error::$line"; done
+          exit "$status"
+
+      - name: App unit tests
+        shell: bash
+        run: |
+          set +e
+          xcodebuild test-without-building \
+            -project FITNA.xcodeproj \
+            -scheme FITNA \
+            -only-testing:FITNATests \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
+            2>&1 | tee build/xcodebuild-test.log | grep -E "Test Case|Executed|error:|\*\* TEST"
+          status="${PIPESTATUS[0]}"
+          summary=$(grep -E "Executed [0-9]+ tests" build/xcodebuild-test.log | tail -1)
+          echo "::notice title=App unit tests::${summary:-no summary}"
+          grep -hE "error:" build/xcodebuild-test.log | sort -u | head -20 | while read -r line; do echo "::error::$line"; done
+          exit "$status"
+
+      - name: UI smoke tests
+        continue-on-error: true
+        shell: bash
+        run: |
+          xcodebuild test-without-building \
+            -project FITNA.xcodeproj \
+            -scheme FITNA \
+            -only-testing:FITNAUITests \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
+            2>&1 | tee build/xcodebuild-uitest.log | grep -E "Test Case|Executed|error:|\*\* TEST"
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcodebuild-logs
+          path: |
+            build/*.log
+            fitnakit-tests.log
+          if-no-files-found: ignore
